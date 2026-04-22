@@ -1,2 +1,26 @@
-# fitness-tracker-
-Modern fitness tracker web app built with HTML, CSS, and JavaScript. Features include workout logging, dynamic table updates, BMI calculator, sidebar navigation, and local Storage for data persistence. Designed with a clean, responsive dashboard-style UI for easy tracking.
+# Fitness Tracker Web App
+
+A modern fitness tracker web application built using HTML, CSS, and JavaScript. This project allows users to log workouts, track exercise data, and calculate BMI through a clean and interactive dashboard interface.
+
+## Features
+
+* Add and track exercises (name, reps/minutes, date)
+* Dynamic workout history table
+* Sidebar navigation with multiple sections
+* BMI calculator with instant results
+* Responsive and modern UI design
+* Data persistence using localStorage
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+
+## Live Demo
+
+(Add your GitHub Pages link here)
+
+## Author
+
+Vinav
