@@ -18,9 +18,7 @@ A modern fitness tracker web application built using HTML, CSS, and JavaScript. 
 * JavaScript
 
 ## Live Demo
-
-(Add your GitHub Pages link here)
-
+https://vinavbirthare.github.io/fitness-tracker/
 ## Author
 
 Vinav
