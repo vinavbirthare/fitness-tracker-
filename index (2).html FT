@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">FT</div>
+        <div>
+          <p class="brand-eyebrow">Health Dashboard</p>
+          <h1>FITNESS TRACKER</h1>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <button class="nav-item active" type="button" data-section="exercise">
+          <span class="nav-icon">E</span>
+          <span>Exercise</span>
+        </button>
+        <button class="nav-item" type="button" data-section="planning">
+          <span class="nav-icon">W</span>
+          <span>Workout Planning</span>
+        </button>
+        <button class="nav-item" type="button" data-section="bmi">
+          <span class="nav-icon">B</span>
+          <span>BMI Calculator</span>
+        </button>
+        <button class="nav-item" type="button" data-section="settings">
+          <span class="nav-icon">S</span>
+          <span>Settings</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-note">
+        <p>Track your progress, plan your next session, and keep fitness data in one clean space.</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="hero-card">
+        <div>
+          <p class="section-tag">Daily Progress</p>
+          <h2>Build consistent workout habits.</h2>
+          <p class="hero-copy">Use the sidebar to manage workouts, estimate BMI, and sketch out future plans.</p>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <span class="metric-label">Workouts Logged</span>
+            <strong id="workout-count">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Current View</span>
+            <strong id="current-view-label">Exercise</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="content-section active" id="exercise-section">
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Exercise Log</p>
+            <h3>Add a workout</h3>
+          </div>
+        </div>
+
+        <div class="panel-grid">
+          <section class="card">
+            <form id="workout-form" class="form-grid">
+              <div class="field">
+                <label for="exercise-name">Exercise Name</label>
+                <input id="exercise-name" type="text" placeholder="Push-ups" required>
+              </div>
+
+              <div class="field">
+                <label for="exercise-value">Reps or Minutes</label>
+                <input id="exercise-value" type="number" min="1" placeholder="20" required>
+              </div>
+
+              <div class="field">
+                <label for="exercise-date">Date</label>
+                <input id="exercise-date" type="date" required>
+              </div>
+
+              <button class="primary-button" type="submit">Add Workout</button>
+            </form>
+            <p class="form-feedback" id="workout-feedback" aria-live="polite">Add your first workout to get started.</p>
+          </section>
+
+          <section class="card table-card">
+            <div class="table-header">
+              <h4>Workout History</h4>
+              <p>New entries appear instantly below.</p>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Exercise</th>
+                    <th>Value</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody id="workout-table-body">
+                  <tr class="empty-row">
+                    <td colspan="3">No workouts added yet.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="content-section" id="planning-section">
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Workout Planning</p>
+            <h3>Plan your next routine</h3>
+          </div>
+        </div>
+
+        <section class="card placeholder-card">
+          <h4>Future Feature</h4>
+          <p>Create weekly routines, recovery days, and goal-based plans here. This section is ready for future workout planning tools.</p>
+        </section>
+      </section>
+
+      <section class="content-section" id="bmi-section">
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">BMI Calculator</p>
+            <h3>Check your body mass index</h3>
+          </div>
+        </div>
+
+        <div class="panel-grid bmi-grid">
+          <section class="card">
+            <form id="bmi-form" class="form-grid compact-form">
+              <div class="field">
+                <label for="weight">Weight (kg)</label>
+                <input id="weight" type="number" min="1" step="0.1" placeholder="70" required>
+              </div>
+
+              <div class="field">
+                <label for="height">Height (m)</label>
+                <input id="height" type="number" min="0.1" step="0.01" placeholder="1.75" required>
+              </div>
+
+              <button class="primary-button" type="submit">Calculate BMI</button>
+            </form>
+          </section>
+
+          <section class="card bmi-result-card">
+            <p class="section-tag">Result</p>
+            <h4 id="bmi-value" aria-live="polite">--</h4>
+            <p id="bmi-message">Enter your weight and height to calculate your BMI.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="content-section" id="settings-section">
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Settings</p>
+            <h3>Customize your app</h3>
+          </div>
+        </div>
+
+        <section class="card settings-card">
+          <div class="setting-row">
+            <div>
+              <h4>Appearance</h4>
+              <p>Dark mode toggle can be added here later.</p>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" disabled>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href="styles.css">
