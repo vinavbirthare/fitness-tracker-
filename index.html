@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-glow glow-one" aria-hidden="true"></div>
+  <div class="page-glow glow-two" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 7h3l1.2 2.3L13 5h4l-2.5 6H17v3h-3.8l-1.4 2.8L10 14H7z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="brand-eyebrow">Health Dashboard</p>
+          <h1>FITNESS TRACKER</h1>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <button class="nav-item active" type="button" data-section="dashboard" aria-current="page" aria-controls="dashboard-section">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 13h6V5H4z"></path>
+              <path d="M14 19h6V5h-6z"></path>
+              <path d="M4 19h6v-4H4z"></path>
+            </svg>
+          </span>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-item" type="button" data-section="planning" aria-controls="planning-section">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 3v3M17 3v3M4 9h16M6 6h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path>
+            </svg>
+          </span>
+          <span>Workout Planning</span>
+        </button>
+        <button class="nav-item" type="button" data-section="bmi" aria-controls="bmi-section">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 4v8"></path>
+              <path d="M8.5 7.5A5 5 0 1 0 16 12"></path>
+              <path d="M12 12l4-2"></path>
+            </svg>
+          </span>
+          <span>BMI Calculator</span>
+        </button>
+        <button class="nav-item" type="button" data-section="exercises" aria-controls="exercises-section">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 10h4v4H4z"></path>
+              <path d="M10 5h4v14h-4z"></path>
+              <path d="M16 8h4v8h-4z"></path>
+            </svg>
+          </span>
+          <span>Exercises</span>
+        </button>
+        <button class="nav-item" type="button" data-section="statistics" aria-controls="statistics-section">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 19V9"></path>
+              <path d="M12 19V5"></path>
+              <path d="M19 19v-7"></path>
+            </svg>
+          </span>
+          <span>Statistics</span>
+        </button>
+        <button class="nav-item" type="button" data-section="settings" aria-controls="settings-section">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 8.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5z"></path>
+              <path d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a1.2 1.2 0 1 1-1.7 1.7l-.1-.1a1 1 0 0 0-1.1-.2 1 1 0 0 0-.6.9v.3a1.2 1.2 0 1 1-2.4 0v-.2a1 1 0 0 0-.7-1 1 1 0 0 0-1.1.2l-.1.1a1.2 1.2 0 1 1-1.7-1.7l.1-.1a1 1 0 0 0 .2-1.1 1 1 0 0 0-.9-.6H5.2a1.2 1.2 0 1 1 0-2.4h.2a1 1 0 0 0 1-.7 1 1 0 0 0-.2-1.1l-.1-.1a1.2 1.2 0 1 1 1.7-1.7l.1.1a1 1 0 0 0 1.1.2 1 1 0 0 0 .6-.9V5.2a1.2 1.2 0 1 1 2.4 0v.2a1 1 0 0 0 .7 1 1 1 0 0 0 1.1-.2l.1-.1a1.2 1.2 0 1 1 1.7 1.7l-.1.1a1 1 0 0 0-.2 1.1 1 1 0 0 0 .9.6h.3a1.2 1.2 0 1 1 0 2.4h-.2a1 1 0 0 0-1 .7z"></path>
+            </svg>
+          </span>
+          <span>Settings</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-note">
+        <p>Stay consistent. Log workouts, review body metrics, and keep your training routine organized.</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="hero-card">
+        <div class="hero-copy-block">
+          <p class="section-tag">Daily Progress</p>
+          <h2>Train smarter and keep momentum visible.</h2>
+          <p class="hero-copy">Your dashboard is ready for quick logging, simple planning, and daily check-ins without leaving the page.</p>
+          <div class="hero-badges">
+            <span class="hero-badge">Workout log</span>
+            <span class="hero-badge">BMI tracker</span>
+            <span class="hero-badge">Dark mode</span>
+          </div>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card metric-highlight">
+            <span class="metric-label">Workouts Logged</span>
+            <strong id="workout-count">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Current View</span>
+            <strong id="current-view-label">Dashboard</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="overview-strip" aria-label="Dashboard summary">
+        <article class="overview-card overview-card-green">
+          <span class="overview-label">Saved Data</span>
+          <strong id="storage-status">0 saved workouts</strong>
+          <p>Your workout log is stored locally in this browser.</p>
+        </article>
+        <article class="overview-card overview-card-blue">
+          <span class="overview-label">Calories Burned</span>
+          <strong id="calories-total">0 kcal</strong>
+          <p>Total calories tracked across your saved workouts.</p>
+        </article>
+        <article class="overview-card overview-card-gold">
+          <span class="overview-label">Focus</span>
+          <strong id="focus-label">Dashboard</strong>
+          <p>Use the sidebar to jump across planning, BMI, and settings.</p>
+        </article>
+      </section>
+
+      <section class="content-section active" id="dashboard-section">
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Dashboard</p>
+            <h3>Track today&apos;s workout</h3>
+          </div>
+        </div>
+
+        <div class="panel-grid">
+          <section class="card accent-card">
+            <form id="workout-form" class="form-grid">
+              <div class="field">
+                <label for="exercise-name">Exercise Name</label>
+                <input id="exercise-name" type="text" placeholder="Push-ups" required>
+              </div>
+
+              <div class="field">
+                <label for="exercise-value">Reps or Minutes</label>
+                <input id="exercise-value" type="number" min="1" placeholder="20" required>
+              </div>
+
+              <div class="field">
+                <label for="exercise-calories">Calories Burned</label>
+                <input id="exercise-calories" type="number" min="1" placeholder="120" required>
+              </div>
+
+              <div class="field">
+                <label for="exercise-date">Date</label>
+                <input id="exercise-date" type="date" required>
+              </div>
+
+              <button class="primary-button" type="submit">Add Workout</button>
+            </form>
+            <p class="form-feedback" id="workout-feedback" aria-live="polite">Add your first workout to get started.</p>
+          </section>
+
+          <section class="card table-card">
+            <div class="table-header">
+              <div>
+                <h4>Workout History</h4>
+                <p>Latest workouts appear at the top.</p>
+              </div>
+              <span class="table-pill">Live log</span>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Exercise</th>
+                    <th>Value</th>
+                    <th>Calories</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody id="workout-table-body">
+                  <tr class="empty-row">
+                    <td colspan="4">No workouts added yet.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+      </section>
+
+      <section class="content-section" id="planning-section" hidden>
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Workout Planning</p>
+            <h3>Plan your next routine</h3>
+          </div>
+        </div>
+
+        <div class="planning-grid">
+          <section class="card plan-card plan-card-blue">
+            <p class="plan-label">Monday</p>
+            <h4>Upper Body Focus</h4>
+            <p>Push-ups, rows, shoulder presses, and a short cooldown walk.</p>
+          </section>
+          <section class="card plan-card plan-card-green">
+            <p class="plan-label">Wednesday</p>
+            <h4>Core and Cardio</h4>
+            <p>Planks, mountain climbers, cycling, and 15 minutes of mobility work.</p>
+          </section>
+          <section class="card plan-card plan-card-gold">
+            <p class="plan-label">Friday</p>
+            <h4>Leg Day</h4>
+            <p>Squats, lunges, calf raises, and light stretching to finish.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="content-section" id="bmi-section" hidden>
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">BMI Calculator</p>
+            <h3>Check your body mass index</h3>
+          </div>
+        </div>
+
+        <div class="panel-grid bmi-grid">
+          <section class="card">
+            <form id="bmi-form" class="form-grid compact-form">
+              <div class="field">
+                <label for="weight">Weight (kg)</label>
+                <input id="weight" type="number" min="1" step="0.1" placeholder="70" required>
+              </div>
+
+              <div class="field">
+                <label for="height">Height (m)</label>
+                <input id="height" type="number" min="0.1" step="0.01" placeholder="1.75" required>
+              </div>
+
+              <button class="primary-button" type="submit">Calculate BMI</button>
+            </form>
+          </section>
+
+          <section class="card bmi-result-card">
+            <p class="section-tag">Result</p>
+            <h4 id="bmi-value" aria-live="polite">--</h4>
+            <p id="bmi-message">Enter your weight and height to calculate your BMI.</p>
+            <div class="bmi-scale">
+              <span>Under</span>
+              <span>Healthy</span>
+              <span>Over</span>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="content-section" id="exercises-section" hidden>
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Exercise Library</p>
+            <h3>Find exercises quickly</h3>
+          </div>
+        </div>
+
+        <section class="card exercise-library-card">
+          <div class="library-toolbar">
+            <div>
+              <h4>Browse exercises</h4>
+              <p>Search by name, target area, or workout type.</p>
+            </div>
+            <div class="library-controls">
+              <label class="search-box" for="exercise-search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"></path>
+                  <path d="M20 20l-3.5-3.5"></path>
+                </svg>
+                <input id="exercise-search" type="search" placeholder="Search exercises">
+              </label>
+
+              <label class="category-box" for="exercise-category">
+                <span>Category</span>
+                <select id="exercise-category">
+                  <option value="All">All</option>
+                  <option value="Strength">Strength</option>
+                  <option value="Core">Core</option>
+                  <option value="Cardio">Cardio</option>
+                  <option value="Flexibility">Flexibility</option>
+                  <option value="Recovery">Recovery</option>
+                </select>
+              </label>
+
+              <label class="category-box" for="exercise-muscle">
+                <span>Muscle Group</span>
+                <select id="exercise-muscle">
+                  <option value="All">All</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="exercise-grid" id="exercise-library"></div>
+        </section>
+      </section>
+
+      <section class="content-section" id="statistics-section" hidden>
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Statistics</p>
+            <h3>Workout analytics</h3>
+          </div>
+        </div>
+
+        <section class="charts-section">
+          <div class="charts-grid">
+            <article class="card chart-card">
+              <div class="chart-card-header">
+                <div>
+                  <h4>Line Graph</h4>
+                  <p>Workout values across recent entries.</p>
+                </div>
+              </div>
+              <canvas id="line-chart" width="520" height="280" aria-label="Workout line graph"></canvas>
+            </article>
+
+            <article class="card chart-card">
+              <div class="chart-card-header">
+                <div>
+                  <h4>Bar Graph</h4>
+                  <p>Total value grouped by exercise name.</p>
+                </div>
+              </div>
+              <canvas id="bar-chart" width="520" height="280" aria-label="Workout bar graph"></canvas>
+            </article>
+
+            <article class="card chart-card">
+              <div class="chart-card-header">
+                <div>
+                  <h4>Pie Chart</h4>
+                  <p>Distribution of workout volume by exercise type.</p>
+                </div>
+              </div>
+              <div class="pie-layout">
+                <canvas id="pie-chart" width="320" height="320" aria-label="Workout pie chart"></canvas>
+                <div class="chart-legend" id="pie-legend"></div>
+              </div>
+            </article>
+
+            <article class="card chart-card">
+              <div class="chart-card-header">
+                <div>
+                  <h4>Histogram</h4>
+                  <p>Distribution of workout values in value ranges.</p>
+                </div>
+              </div>
+              <canvas id="histogram-chart" width="520" height="280" aria-label="Workout histogram"></canvas>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="content-section" id="settings-section" hidden>
+        <div class="panel-header">
+          <div>
+            <p class="section-tag">Settings</p>
+            <h3>Customize your app</h3>
+          </div>
+        </div>
+
+        <section class="card settings-card">
+          <div class="setting-row">
+            <div>
+              <h4>Appearance</h4>
+              <p>Switch between light and dark mode. Your choice stays saved in this browser.</p>
+            </div>
+            <label class="toggle">
+              <input id="theme-toggle" type="checkbox" aria-label="Toggle dark mode">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-status">
+            <span class="setting-dot"></span>
+            <span id="theme-status">Light mode active</span>
+            <span class="theme-chip" id="theme-display">Light mode</span>
+          </div>
+
+          <div class="settings-divider"></div>
+
+          <div class="setting-row">
+            <div>
+              <h4>Saved Workouts</h4>
+              <p>Clear the stored workout history if you want a fresh start.</p>
+            </div>
+            <button class="secondary-button" id="clear-workouts" type="button">Clear Saved Data</button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
